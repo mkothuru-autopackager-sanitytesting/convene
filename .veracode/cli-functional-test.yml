@@ -1,0 +1,13 @@
+name: Convene
+testcases:
+- name: test-convene
+  steps:
+  - script: |
+      cd ../
+      {{.script-path}}/bin/veracode package --source . --type directory --output .veracode/output/auto --trust
+    assertions:
+      - result.code ShouldEqual 0
+      - result.timeseconds ShouldBeLessThan 120
+      - result.systemout ShouldContainSubstring " .veracode/output/auto/veracode-auto-pack-convene-js.zip"
+      - result.systemout ShouldContainSubstring "Successfully created 1 artifact(s)."
+  

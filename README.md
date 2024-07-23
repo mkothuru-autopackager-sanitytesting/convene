@@ -8,7 +8,7 @@ Convene is a shared social calendar platform for you &amp; your friends so you c
 
 <br />
 
-## Technologies Used
+## Technologies Used.
 <li>React Native Expo</li>
 <li>Zustand</li>
 <li>Firebase V9</li>
